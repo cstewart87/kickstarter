@@ -6,7 +6,7 @@ require "kickstarter/version"
 require "kickstarter/project"
 
 module Kickstarter
-  BASE_URL = "http://kickstarter.com"  
+  BASE_URL = "http://www.kickstarter.com"  
   
   Categories = {
     :art         => "art",

@@ -5,7 +5,9 @@ module Kickstarter
     attr_reader :node
     
     def initialize(node)
-      @node = node
+	  project_link = node.css('h2 a').first
+	  project_url = File.join(Kickstarter::BASE_URL, project_link.attribute('href').to_s.split('?').first
+	  @node = Nokogiri::HTML(open(project_url))
     end
 
     def handle
